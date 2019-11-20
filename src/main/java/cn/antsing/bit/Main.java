@@ -17,6 +17,7 @@ public class Main {
 //        System.out.println(Integer.toBinaryString(i));
 //        System.out.println(getBit(i,j));
 
+        System.out.println("");
 
         //通过bit位来比较数字大小
         int i = 83;
