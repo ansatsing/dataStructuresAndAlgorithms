@@ -19,3 +19,5 @@ public int void sum(int num){
     return sum(num-1)+num;//对应上面的第2步
 }
 ```
+## 总结
+*数学归纳法是编码的依据*
