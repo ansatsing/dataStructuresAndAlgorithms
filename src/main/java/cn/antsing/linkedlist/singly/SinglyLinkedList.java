@@ -25,7 +25,10 @@ public class SinglyLinkedList<T> {
         return tail;
     }
 
-//    private class Node<T>{
+    public void setHead(Node head) {
+        this.head = head;
+    }
+    //    private class Node<T>{
 //        private final T value;
 //        private Node next;
 //
@@ -88,9 +91,10 @@ public class SinglyLinkedList<T> {
     }
 
     public  static <T> SinglyLinkedList<T> reverseSinglyLinkedList(SinglyLinkedList<T> singlyLinkedList){
-        SinglyLinkedList SinglyLinkedList = new SinglyLinkedList(doReverse(singlyLinkedList.head));
-        return SinglyLinkedList;
-
+//        SinglyLinkedList SinglyLinkedList = new SinglyLinkedList(doReverse(singlyLinkedList.head));
+//        return SinglyLinkedList;
+        singlyLinkedList.setHead(doReverse(singlyLinkedList.head));
+        return singlyLinkedList;
     }
 
     /**
@@ -115,24 +119,24 @@ public class SinglyLinkedList<T> {
         node.setNext(null);
         return head;
     }
+    public  static <T> SinglyLinkedList<T> reverseSinglyLinkedListByLoop(SinglyLinkedList<T> singlyLinkedList){
+//        SinglyLinkedList SinglyLinkedList = new SinglyLinkedList(doReverseByLoop(singlyLinkedList.head));
+//        return SinglyLinkedList;
+        singlyLinkedList.setHead(doReverse(singlyLinkedList.head));
+        return singlyLinkedList;
+
+    }
     private static <T> Node<T> doReverseByLoop(Node<T> node){
-//        if(node == null){
-//            return null;
-//        }
-//        if(node.getNext() == null){
-//            return node;
-//        }
-//        Node head = doReverse(node.getNext());
-//        node.getNext().setNext(node);
-//        node.setNext(null);
-//        return head;
         if(node == null){
             return null;
         }
-        Node newNode = new Node(node.getValue());
+        Node result =new Node(node.getValue());
         while (node.getNext()!=null){
+            Node temp = new Node(node.getNext().getValue());
+            temp.setNext(result);
+            result = temp;
             node = node.getNext();
         }
-        return null;
+        return result;
     }
 }
