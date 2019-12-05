@@ -1,4 +1,4 @@
-package cn.antsing.linkedlist.singly;
+package cn.antsing.linearlist.linkedlist.singly;
 
 import java.util.Arrays;
 

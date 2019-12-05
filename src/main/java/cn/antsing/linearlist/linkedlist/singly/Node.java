@@ -1,4 +1,4 @@
-package cn.antsing.linkedlist.singly;
+package cn.antsing.linearlist.linkedlist.singly;
 
 public class Node<T>{
     private final T value;
