@@ -1,5 +1,7 @@
 package cn.antsing.bit;
 
+import java.util.Hashtable;
+
 public class Main {
     public static void main(String[] args) {
 //        int a = 9;
@@ -24,6 +26,10 @@ public class Main {
         int j = 82;
         byte r = compareByBit(i,j);
         System.out.println(r);
+
+        int   MAX_VALUE = 0x7fffffff;
+        System.out.println("=======================");
+        System.out.println(MAX_VALUE);
     }
 
     /**
