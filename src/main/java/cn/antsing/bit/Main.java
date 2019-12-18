@@ -30,6 +30,10 @@ public class Main {
         int   MAX_VALUE = 0x7fffffff;
         System.out.println("=======================");
         System.out.println(MAX_VALUE);
+
+        String hashValue = "cd611a31ea969b908932d44d126d195b";
+        System.out.println("=============md5哈希值128位二进制或者32位十六进制================");
+        System.out.println(hashValue.length());
     }
 
     /**
